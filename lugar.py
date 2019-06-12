@@ -4,12 +4,13 @@ from json import loads
 
 
 def obtenerCoordenadas(direccion):
+	api_key = 'your api key'
 	# Codifica la direccion para ser una url válida
 	url = quote(direccion) 
 	# Crea un obeto de tipo request 
 	req = urllib.request.Request(f'https://devru-latitude-longitude-find-v1.p.rapidapi.com/latlon.php?location={url}')
 	# Agrega encabezados a la petición
-	req.add_header('X-RapidAPI-Key', 'efcdd99310mshb14d34b125b4ecep18fa47jsnb2fb1ae86bce')
+	req.add_header('X-RapidAPI-Key', api_key)
 	# Realiza la petición, devuelve un objeto de tipo httpresponse
 	res = urllib.request.urlopen(req)
 	# Convirtiendo json a objeto python y antes leyendo la respuesta 
