@@ -1,0 +1,60 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;	
+}
+
+body {
+	font-size: 2rem;
+}
+body.footer-fijo {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+body.footer-fijo main {
+	flex: 1;
+}
+
+/* Globales */
+.contenedor {
+	max-width: 120rem;
+	margin: 0 auto;
+	width: 95%;
+}
+
+img {
+	max-width: 100%;
+}
+
+/* Utilidades */
+.texto-centrado {
+	text-align: center;
+}
+/* Grid */
+@media only screen and (min-width: 76.8rem) {
+	.grid {
+		display: flex;
+		justify-content: space-between;
+	}
+	.columnas-6 {
+		flex: 0 0 calc(50% - 1rem);
+	}
+}
+
+.site-header {
+	padding: 2rem;
+}
+.site-footer {
+	background-color: #000;
+	color: #fff;
+	padding: 3rem;
+	text-align: center;
+}
